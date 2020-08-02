@@ -27,24 +27,26 @@ const oranges = [5, -6];
 countApplesAndOranges(s, t, a, b, apples, oranges);
 
 function countApplesAndOranges(s, t, a, b, apples, oranges) {
-  let countApple = 0;
-  let countOrange = 0;
+  // let countApple = 0;
+  // let countOrange = 0;
 
-  let appleList = apples.map((apple) => apple + a);
-  let orangeList = oranges.map((orange) => orange + b);
+  // let appleList = apples.map((apple) => apple + a);
+  // let orangeList = oranges.map((orange) => orange + b);
 
-  appleList.map((list) => {
-    if (list >= s && list <= t) {
-      countApple++;
-    }
-  });
+  // appleList.map((list) => {
+  //   if (list >= s && list <= t) {
+  //     countApple++;
+  //   }
+  // });
 
-  orangeList.map((list) => {
-    if (list >= s && list <= t) {
-      countOrange++;
-    }
-  });
+  // orangeList.map((list) => {
+  //   if (list >= s && list <= t) {
+  //     countOrange++;
+  //   }
+  // });
 
-  console.log(countApple);
-  console.log(countOrange);
+  // console.log(countApple);
+  // console.log(countOrange);
+  console.log(apples.map((p) => p + a).filter((p) => p >= s && p <= t).length);
+  console.log(oranges.map((p) => p + b).filter((p) => p >= s && p <= t).length);
 }
